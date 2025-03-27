@@ -8,23 +8,33 @@
 </head>
 <body>
     <header>
-        <h1>1 ITEM IN YOUR CART</h1>
-    </header>
-    <main class="cart-container">
-        <div class="cart-item">
-            <img src="medicine.png" alt="Medicine">
-            <div class="cart-details">
-                <h2>Coenzyme Q10 (Coq10) 200mg</h2>
-                <p>With Piperine - For Heart Health</p>
-                <label>Quantity: </label>
-                <input type="number" value="1" min="1">
+        <div class="nav-bar">
+            <img src="logo.png" alt="Logo" class="logo">
+            <input type="text" class="search-bar" placeholder="Search for">
+            <button class="search-btn">Search</button>
+            <div class="nav-links">
+                <a href="#">Cart</a>
+                <a href="#">Log in</a>
             </div>
         </div>
-        <div class="bill-summary">
-            <h2>Bill Summary</h2>
-            <p>Total MRP: ₹1749</p>
-            <p>Delivery charges: ₹50</p>
-            <button class="checkout-btn">Select Address</button>
+    </header>
+
+    <main class="cart-container">
+        <div class="cart-card">
+            <h2>Your Cart</h2>
+            <div class="cart-item">
+                <img src="medicine.png" alt="Medicine" class="cart-item-img">
+                <div class="cart-item-details">
+                    <p class="cart-item-title">Pharma Coenzyme Q10 (Coq10) 200mg With Piperine</p>
+                    <p class="cart-item-price">₹822.03 <span class="mrp">MRP ₹1749</span> <span class="discount">53% OFF</span></p>
+                    <div class="cart-controls">
+                        <button class="qty-btn">-</button>
+                        <span class="qty">1</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                </div>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
         </div>
     </main>
 </body>
