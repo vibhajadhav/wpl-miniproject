@@ -7,21 +7,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main class="medicine-detail-container">
-        <div class="medicine-image">
-            <img src="medicine.png" alt="Medicine">
+    <header>
+        <div class="nav-bar">
+            <img src="logo.png" alt="Logo" class="logo">
+            <input type="text" class="search-bar" placeholder="Search for">
+            <button class="search-btn">Search</button>
+            <div class="nav-links">
+                <a href="#">Cart</a>
+                <a href="#">Log in</a>
+            </div>
         </div>
-        <div class="medicine-info">
-            <h1>Coenzyme Q10 (Coq10) 200mg</h1>
-            <p>With Piperine - For Heart Health Bottle Of 60 Capsules</p>
-            <p class="price">₹822.03 <span class="mrp">₹1749</span> <span class="discount">53% OFF</span></p>
+    </header>
+
+    <main class="medicine-detail-container">
+        <div class="left-section">
+            <img src="medicine.png" alt="Medicine" class="medicine-image">
+            <div class="medicine-thumbnails">
+                <img src="thumb1.png" alt="Thumbnail">
+                <img src="thumb2.png" alt="Thumbnail">
+                <img src="thumb3.png" alt="Thumbnail">
+            </div>
+            <p class="non-returnable">Non Returnable <a href="#">Read More</a></p>
+        </div>
+        
+        <div class="right-section">
+            <h1>Pharma Coenzyme Q10 (Coq10) 200mg With Piperine - For Heart Health Bottle Of 60 Capsules</h1>
+            <p class="price">₹822.03 <span class="mrp">MRP ₹1749</span> <span class="discount">53% OFF</span></p>
+            <p class="tax-info">Inclusive of all taxes</p>
             <button class="add-to-cart" onclick="addToCart()">Add To Cart</button>
+        </div>
+
+        <div class="cart-summary">
+            <p>Please add item(s) to proceed</p>
+            <button class="view-cart-btn">View Cart ></button>
         </div>
     </main>
 
     <script>
         function addToCart() {
-            window.location.href = 'cart.html';
+            document.querySelector('.cart-summary').style.display = 'block';
         }
     </script>
 </body>
