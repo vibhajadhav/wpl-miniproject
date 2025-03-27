@@ -136,18 +136,12 @@
     </div>
   </section>
 
-  <!-- Categories Section (existing) -->
-<section class="categories">
-    <!-- ... your categories code here ... -->
-  </section>
-  
-  <!-- "Making Lives Better" Section (NEW) -->
+  <!-- "Making Lives Better" Section -->
   <section class="py-5">
     <div class="container">
       <!-- Logo + Title Row -->
       <div class="row justify-content-center">
         <div class="col-md-8 text-center">
-          <!-- Replace 'pharma2025.png' with your actual image file -->
           <img
             src="logo.png"
             alt="Pharma 2025 Logo"
@@ -157,7 +151,7 @@
           <h2 class="mt-4 mb-3 fw-bold">Making Lives Better</h2>
         </div>
       </div>
-  
+
       <!-- Main Text Content Row -->
       <div class="row justify-content-center mt-4">
         <div class="col-md-10">
@@ -169,7 +163,7 @@
             Mumbai, Delhi, Bengaluru, and Kolkata to towns across the country, we
             bring medicines and wellness products straight to your door!
           </p>
-  
+
           <!-- Making Healthcare Effortless -->
           <h3 class="fw-semibold mt-4">Making Healthcare Effortless!</h3>
           <p>
@@ -199,7 +193,7 @@
               your essential medications on hand
             </li>
           </ul>
-  
+
           <!-- Trusted Medical Information -->
           <h3 class="fw-semibold mt-4">Trusted Medical Information at Your Fingertips</h3>
           <p>
@@ -217,296 +211,84 @@
     </div>
   </section>
 
-
-  <!-- Trending Near You Section -->
+  <!-- Trending Near You Section (clickable cards) -->
   <section class="py-5 bg-light">
     <div class="container">
       <h2 class="mb-4">Trending Near You</h2>
       <div class="row row-cols-2 row-cols-md-4 g-4">
-        <!-- Example Product 1 -->
+        <!-- Product 1 -->
         <div class="col">
-          <div class="card text-center">
-            <img
-              src="trending1.jpg"
-              class="card-img-top"
-              alt="Trending Product 1"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Name 1</h5>
-              <p class="card-text">Short description here</p>
-              <!-- Interactive: opens a modal -->
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#trendingModal1"
-              >
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Example Product 2 -->
-        <div class="col">
-          <div class="card text-center">
-            <img
-              src="trending2.jpg"
-              class="card-img-top"
-              alt="Trending Product 2"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Name 2</h5>
-              <p class="card-text">Short description here</p>
-              <!-- Interactive: opens a modal -->
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#trendingModal2"
-              >
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Example Product 3 -->
-        <div class="col">
-          <div class="card text-center">
-            <img
-              src="trending3.jpg"
-              class="card-img-top"
-              alt="Trending Product 3"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Name 3</h5>
-              <p class="card-text">Short description here</p>
-              <!-- Interactive: opens a modal -->
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#trendingModal3"
-              >
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Example Product 4 -->
-        <div class="col">
-          <div class="card text-center">
-            <img
-              src="trending4.jpg"
-              class="card-img-top"
-              alt="Trending Product 4"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Product Name 4</h5>
-              <p class="card-text">Short description here</p>
-              <!-- Interactive: opens a modal -->
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#trendingModal4"
-              >
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modals for Trending Products -->
-      <!-- Product 1 Modal -->
-      <div
-        class="modal fade"
-        id="trendingModal1"
-        tabindex="-1"
-        aria-labelledby="trendingModal1Label"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="trendingModal1Label">
-                Product Name 1
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>More info about Product Name 1...</p>
+          <a href="product1-details.html" class="text-decoration-none text-dark">
+            <div class="card text-center">
               <img
                 src="trending1.jpg"
+                class="card-img-top"
                 alt="Trending Product 1"
-                class="img-fluid"
               />
+              <div class="card-body">
+                <h5 class="card-title">Product Name 1</h5>
+                <p class="card-text">Short description here</p>
+              </div>
             </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <a href="product1-details.html" class="btn btn-primary">
-                Go to Product Page
-              </a>
-            </div>
-          </div>
+          </a>
         </div>
-      </div>
-
-      <!-- Product 2 Modal -->
-      <div
-        class="modal fade"
-        id="trendingModal2"
-        tabindex="-1"
-        aria-labelledby="trendingModal2Label"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="trendingModal2Label">
-                Product Name 2
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>More info about Product Name 2...</p>
+        <!-- Product 2 -->
+        <div class="col">
+          <a href="product2-details.html" class="text-decoration-none text-dark">
+            <div class="card text-center">
               <img
                 src="trending2.jpg"
+                class="card-img-top"
                 alt="Trending Product 2"
-                class="img-fluid"
               />
+              <div class="card-body">
+                <h5 class="card-title">Product Name 2</h5>
+                <p class="card-text">Short description here</p>
+              </div>
             </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <a href="product2-details.html" class="btn btn-primary">
-                Go to Product Page
-              </a>
-            </div>
-          </div>
+          </a>
         </div>
-      </div>
-
-      <!-- Product 3 Modal -->
-      <div
-        class="modal fade"
-        id="trendingModal3"
-        tabindex="-1"
-        aria-labelledby="trendingModal3Label"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="trendingModal3Label">
-                Product Name 3
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>More info about Product Name 3...</p>
+        <!-- Product 3 -->
+        <div class="col">
+          <a href="product3-details.html" class="text-decoration-none text-dark">
+            <div class="card text-center">
               <img
                 src="trending3.jpg"
+                class="card-img-top"
                 alt="Trending Product 3"
-                class="img-fluid"
               />
+              <div class="card-body">
+                <h5 class="card-title">Product Name 3</h5>
+                <p class="card-text">Short description here</p>
+              </div>
             </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <a href="product3-details.html" class="btn btn-primary">
-                Go to Product Page
-              </a>
-            </div>
-          </div>
+          </a>
         </div>
-      </div>
-
-      <!-- Product 4 Modal -->
-      <div
-        class="modal fade"
-        id="trendingModal4"
-        tabindex="-1"
-        aria-labelledby="trendingModal4Label"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="trendingModal4Label">
-                Product Name 4
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>More info about Product Name 4...</p>
+        <!-- Product 4 -->
+        <div class="col">
+          <a href="product4-details.html" class="text-decoration-none text-dark">
+            <div class="card text-center">
               <img
                 src="trending4.jpg"
+                class="card-img-top"
                 alt="Trending Product 4"
-                class="img-fluid"
               />
+              <div class="card-body">
+                <h5 class="card-title">Product Name 4</h5>
+                <p class="card-text">Short description here</p>
+              </div>
             </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <a href="product4-details.html" class="btn btn-primary">
-                Go to Product Page
-              </a>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
-      <!-- End of Trending Modals -->
     </div>
   </section>
 
-  <!-- Featured Brands Section -->
+  <!-- Featured Brands Section (clickable images) -->
   <section class="py-5">
     <div class="container">
       <h2 class="mb-4">Featured Brands</h2>
       <div class="row row-cols-2 row-cols-md-4 g-4 text-center">
-        <!-- Wrap brand images in an anchor to make them clickable -->
         <div class="col">
           <a href="brand1-details.html">
             <img src="brand1.png" alt="Brand 1" class="img-fluid" />
@@ -531,142 +313,37 @@
     </div>
   </section>
 
-  <!-- Often Ordered Section -->
+  <!-- Often Ordered Section (clickable cards) -->
   <section class="py-5 bg-light">
     <div class="container">
       <h2 class="mb-4">Often Ordered</h2>
       <div class="row row-cols-2 row-cols-md-4 g-4">
-        <!-- Example product card -->
+        <!-- Example product 1 -->
         <div class="col">
-          <div class="card text-center">
-            <img src="often1.jpg" class="card-img-top" alt="Often Ordered 1" />
-            <div class="card-body">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text">Description or details</p>
-              <!-- Interactive button opens a modal -->
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#oftenOrderedModal1"
-              >
-                Learn More
-              </button>
+          <a href="often1-details.html" class="text-decoration-none text-dark">
+            <div class="card text-center">
+              <img src="often1.jpg" class="card-img-top" alt="Often Ordered 1" />
+              <div class="card-body">
+                <h5 class="card-title">Product Name</h5>
+                <p class="card-text">Description or details</p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
-        <!-- Add more as needed -->
+        <!-- Example product 2 -->
         <div class="col">
-          <div class="card text-center">
-            <img src="often2.jpg" class="card-img-top" alt="Often Ordered 2" />
-            <div class="card-body">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text">Description or details</p>
-              <!-- Interactive button opens a modal -->
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#oftenOrderedModal2"
-              >
-                Learn More
-              </button>
+          <a href="often2-details.html" class="text-decoration-none text-dark">
+            <div class="card text-center">
+              <img src="often2.jpg" class="card-img-top" alt="Often Ordered 2" />
+              <div class="card-body">
+                <h5 class="card-title">Product Name</h5>
+                <p class="card-text">Description or details</p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
+        <!-- Add more items similarly -->
       </div>
-
-      <!-- Modals for Often Ordered Items -->
-      <!-- Often Ordered 1 Modal -->
-      <div
-        class="modal fade"
-        id="oftenOrderedModal1"
-        tabindex="-1"
-        aria-labelledby="oftenOrderedModal1Label"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="oftenOrderedModal1Label">
-                Product Name (Often Ordered 1)
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>More details about this product...</p>
-              <img
-                src="often1.jpg"
-                alt="Often Ordered 1"
-                class="img-fluid"
-              />
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <a href="often1-details.html" class="btn btn-primary">
-                Go to Product Page
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Often Ordered 2 Modal -->
-      <div
-        class="modal fade"
-        id="oftenOrderedModal2"
-        tabindex="-1"
-        aria-labelledby="oftenOrderedModal2Label"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="oftenOrderedModal2Label">
-                Product Name (Often Ordered 2)
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>More details about this product...</p>
-              <img
-                src="often2.jpg"
-                alt="Often Ordered 2"
-                class="img-fluid"
-              />
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <a href="often2-details.html" class="btn btn-primary">
-                Go to Product Page
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End of Often Ordered Modals -->
     </div>
   </section>
 
