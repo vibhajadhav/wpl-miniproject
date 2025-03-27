@@ -47,9 +47,11 @@ body {
 
 /* Carousel */
 .carousel-item img {
-    height: 250px;
+    height: 500px;
     object-fit: cover;
 }
+
+
 /* Categories Section */
 .categories {
     text-align: center;
@@ -177,3 +179,4 @@ a {
 .hidden {
     display: none;
 }
+
