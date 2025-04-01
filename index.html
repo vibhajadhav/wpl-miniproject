@@ -47,6 +47,36 @@
     .current-pincode {
       color: #0d6efd;
     }
+    /* Testimonial Carousel Styles */
+    .testimonial-carousel .carousel-item {
+      padding: 20px;
+    }
+    .testimonial-card {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      height: 100%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .testimonial-author {
+      font-weight: bold;
+    }
+    .testimonial-location {
+      color: #666;
+    }
+    .carousel-control-prev, .carousel-control-next {
+      width: 5%;
+    }
+    .carousel-indicators [data-bs-target] {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
   </style>
 </head>
 <body>
@@ -73,7 +103,7 @@
         </button>
       </form>
       <div class="nav-icons">
-        <a href="#" class="cart">🛒 Cart</a>
+        <a href="cart.html" class="cart">🛒 Cart</a>
         <a href="login.html">Login</a>
       </div>
     </div>
@@ -408,49 +438,102 @@
     </div>
   </section>
 
-  <!-- User Testimonials Section (Our Users Say) -->
-  <section class="py-5">
+  <!-- User Testimonials Carousel -->
+  <section class="py-5 bg-white">
     <div class="container">
-      <h2 class="mb-4">Our users say</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <!-- Testimonial 1 -->
-        <div class="col">
-          <div class="p-3 border rounded bg-white">
-            <blockquote class="blockquote">
-              <p>
-                "I love using Pharma 2025! The delivery is fast and the products
-                are genuine."
-              </p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-              John Doe, <cite title="Source Title">Mumbai</cite>
-            </figcaption>
+      <h2 class="mb-4 text-center">What Our Customers Say</h2>
+      <div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Testimonial 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="testimonial-card text-center">
+                  <p class="testimonial-text">"I love using Pharma 2025! The delivery is fast and the products are genuine. I've been using this service for my monthly medicines and it's been a lifesaver."</p>
+                  <div class="testimonial-author">John Doe</div>
+                  <div class="testimonial-location">Mumbai</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="testimonial-card text-center">
+                  <p class="testimonial-text">"Excellent service and a wide range of products at great prices. Their customer support is very responsive and helpful when I had questions about my order."</p>
+                  <div class="testimonial-author">Jane Smith</div>
+                  <div class="testimonial-location">Delhi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="testimonial-card text-center">
+                  <p class="testimonial-text">"Using Pharma 2025 has been a game-changer for my family's healthcare needs. The subscription service ensures we never run out of essential medications."</p>
+                  <div class="testimonial-author">Alex Kumar</div>
+                  <div class="testimonial-location">Kolkata</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 4 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="testimonial-card text-center">
+                  <p class="testimonial-text">"The convenience of ordering medicines online and getting them delivered to my doorstep is unparalleled. Pharma 2025 has made managing my chronic condition much easier."</p>
+                  <div class="testimonial-author">Priya Sharma</div>
+                  <div class="testimonial-location">Bangalore</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 5 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="testimonial-card text-center">
+                  <p class="testimonial-text">"I was skeptical at first about ordering medicines online, but Pharma 2025 has proven to be reliable and trustworthy. The quality of products is excellent."</p>
+                  <div class="testimonial-author">Rahul Patel</div>
+                  <div class="testimonial-location">Hyderabad</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 6 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="testimonial-card text-center">
+                  <p class="testimonial-text">"Their express delivery option saved me when I needed emergency medication late at night. Truly a service that cares about its customers' wellbeing."</p>
+                  <div class="testimonial-author">Ananya Gupta</div>
+                  <div class="testimonial-location">Chennai</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Testimonial 2 -->
-        <div class="col">
-          <div class="p-3 border rounded bg-white">
-            <blockquote class="blockquote">
-              <p>"Excellent service and a wide range of products at great prices."</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-              Jane Smith, <cite title="Source Title">Delhi</cite>
-            </figcaption>
-          </div>
-        </div>
-        <!-- Testimonial 3 -->
-        <div class="col">
-          <div class="p-3 border rounded bg-white">
-            <blockquote class="blockquote">
-              <p>
-                "Using Pharma 2025 has been a game-changer for my family's
-                healthcare needs."
-              </p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-              Alex Kumar, <cite title="Source Title">Kolkata</cite>
-            </figcaption>
-          </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <!-- Indicators -->
+        <div class="carousel-indicators position-relative mt-3">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
         </div>
       </div>
     </div>
@@ -572,6 +655,16 @@
     document.getElementById('pincodeModal').addEventListener('show.bs.modal', function() {
       document.getElementById('pincodeMessage').innerHTML = '';
     });
+
+    // Initialize testimonial carousel with autoplay
+    document.addEventListener('DOMContentLoaded', function() {
+      const testimonialCarousel = new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
+        interval: 5000, // Rotate every 5 seconds
+        wrap: true
+      });
+    });
+
+    
   </script>
 </body>
 </html>
