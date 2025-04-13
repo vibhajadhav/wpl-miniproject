@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Subset Sum Backtracking Visualizer</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+    h1 { text-align: center; }
+    #inputSection { margin-bottom: 20px; text-align: center; }
+    #tree { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+    .level { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .node {
+      border: 2px solid #333;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: white;
+      position: relative;
+      min-width: 50px;
+    }
+    .success { background: lightgreen; }
+    .fail { background: #ffcccc; }
+    .line {
+      position: absolute;
+      width: 2px;
+      background: #999;
+      transform-origin: top;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Sum of Subset - Backtracking Visualizer</h1>
+
+<div id="inputSection">
+  <label>Enter set (comma separated): <input type="text" id="setInput" value="3, 1, 5, 9, 12"></label><br><br>
+  <label>Target Sum: <input type="number" id="targetInput" value="9"></label><br><br>
+  <button onclick="startVisualization()">Start</button>
+</div>
+
+<div id="tree"></div>
+
+<script>
+  function startVisualization() {
+    const set = document.getElementById("setInput").value.split(',').map(Number).filter(n => !isNaN(n));
+    const target = parseInt(document.getElementById("targetInput").value);
+    document.getElementById("tree").innerHTML = '';
+    const tree = document.getElementById("tree");
+
+    let levelMap = {};
+
+    function createNode(level, value, sum, path, success) {
+      if (!levelMap[level]) {
+        levelMap[level] = document.createElement("div");
+        levelMap[level].className = "level";
+        tree.appendChild(levelMap[level]);
+      }
+
+      const node = document.createElement("div");
+      node.className = "node";
+      node.innerText = `Sum: ${sum}`;
+      if (success) node.classList.add("success");
+      else if (level === set.length) node.classList.add("fail");
+
+      levelMap[level].appendChild(node);
+      return node;
+    }
+
+    function backtrack(index, currentSum, path, parentNode, level) {
+      const success = currentSum === target && index === set.length;
+      const currentNode = createNode(level, set[index], currentSum, path, success);
+
+      if (parentNode) connectNodes(parentNode, currentNode);
+
+      if (index === set.length) return;
+
+      // Include
+      backtrack(index + 1, currentSum + set[index], [...path, set[index]], currentNode, level + 1);
+      // Exclude
+      backtrack(index + 1, currentSum, path, currentNode, level + 1);
+    }
+
+    function connectNodes(parent, child) {
+      const line = document.createElement("div");
+      line.className = "line";
+
+      const parentRect = parent.getBoundingClientRect();
+      const childRect = child.getBoundingClientRect();
+
+      const x1 = parent.offsetLeft + parent.offsetWidth / 2;
+      const y1 = parent.offsetTop + parent.offsetHeight;
+      const x2 = child.offsetLeft + child.offsetWidth / 2;
+      const y2 = child.offsetTop;
+
+      const dx = x2 - x1;
+      const dy = y2 - y1;
+      const length = Math.sqrt(dx * dx + dy * dy);
+
+      line.style.height = `${length}px`;
+      line.style.left = `${parent.offsetLeft + parent.offsetWidth / 2}px`;
+      line.style.top = `${parent.offsetTop + parent.offsetHeight}px`;
+      line.style.transform = `rotate(${Math.atan2(dy, dx)}rad)`;
+
+      parent.appendChild(line);
+    }
+
+    // Start recursion
+    backtrack(0, 0, [], null, 0);
+  }
+</script>
+
+</body>
+</html>
